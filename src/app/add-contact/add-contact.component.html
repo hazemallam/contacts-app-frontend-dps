@@ -1,0 +1,19 @@
+
+<section class="container border bg-light text-dark mt-5">
+    <h2>Add New Contact</h2>
+    <form #myForm="ngForm" (ngSubmit)="addMyContact(myForm.value)">
+        <div class="form-group">
+            <input class="form-control p-2" placeholder="enter mobile" name="mobile" ngModel>
+        </div>
+        <div class="form-group">
+            <input class="form-control p-2" placeholder="enter phone" name="phone" ngModel>
+        </div>
+        <div class="form-group">
+            <input class="form-control p-2" placeholder="enter address" name="address" ngModel>
+        </div>
+        
+        <div class="form-group">
+            <button type="submit" class="btn btn-success">Add Contact</button>
+        </div>
+    </form>
+</section>

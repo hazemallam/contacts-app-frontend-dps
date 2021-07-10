@@ -1,0 +1,21 @@
+
+<section class="container border bg-light text-dark mt-5">
+    <h2>Edit User {{user.name}}</h2>
+    <form #myForm="ngForm" (ngSubmit)="editMyUser(myForm.value)">
+        <div class="form-group">
+            <input class="form-control p-2" placeholder="enter name" name="name" [(ngModel)]='user.name'>
+        </div>
+        <div class="form-group">
+            <input class="form-control p-2" placeholder="enter age" name="age" [(ngModel)]='user.age'>
+        </div>
+        <div class="form-group">
+            <input class="form-control p-2" placeholder="enter password" name="password" [(ngModel)]='user.password'>
+        </div>
+        <div class="form-group">
+            <input class="form-control p-2" placeholder="enter email" name="email" [(ngModel)]='user.email'>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success">Update User</button>
+        </div>
+    </form>
+</section>

@@ -1,0 +1,21 @@
+
+<section class="container border bg-light text-dark mt-5">
+    <h2>Add New User</h2>
+    <form #myForm="ngForm" (ngSubmit)="addMyUser(myForm.value)">
+        <div class="form-group">
+            <input class="form-control p-2" placeholder="enter name" name="name" ngModel>
+        </div>
+        <div class="form-group">
+            <input class="form-control p-2" placeholder="enter age" name="age" ngModel>
+        </div>
+        <div class="form-group">
+            <input class="form-control p-2" placeholder="enter password" name="password" ngModel>
+        </div>
+        <div class="form-group">
+            <input class="form-control p-2" placeholder="enter email" name="email" ngModel>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success">Add User</button>
+        </div>
+    </form>
+</section>

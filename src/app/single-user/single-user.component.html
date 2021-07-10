@@ -1,0 +1,42 @@
+
+<section class="container border bg-light text-dark mt-5">
+    <h2>Name: {{user.name}}</h2>
+    <h4>Age: {{user.age}}</h4>
+    <h4>Password: {{user.password}}</h4>
+    <h4>Email: {{user.email}}</h4>
+    </section>
+
+    <section class="container border mt-5 bg-light text-dark">
+        <div class="row">
+            <div class="col-6"><h2 >All Contacts</h2></div>
+            
+            <div class="col-6 text-right"><a class="btn btn-success" href="newcontact/{{user._id}}">Add New Contact</a></div>
+    
+        </div>
+        <table class="table table-striped ">
+            <thead >
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">mobile</th>
+                    <th scope="col">phone</th>
+                    <th scope="col">address</th>
+                    <!-- <th scope="col">email</th>
+                    <th scope="col">actions</th> -->
+                </tr>
+            </thead>
+            <tbody >
+                <tr *ngFor='let user of users' class="border">
+                    <th scope="row" class="border"><a routerLink="{{user._id}}">{{user._id}}</a></th>
+                    <td class="border">{{user.mobile}}</td>
+                    <td class="border">{{user.phone}}</td>
+                    <td class="border">{{user.address}}</td>
+                    <!-- <td class="border">{{user.email}}</td> -->
+                    <td class="border">
+                        <a href="editcontact/{{user._id}}" class="btn btn-success mr-2">Edit</a>
+                        <button class="btn btn-danger" (click)="deleteContact(user._id)">Delete</button>
+                        <!-- <a routerLink="newcontact/{{user._id}}" class="btn btn-success ml-2">Add Contact</a> -->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
